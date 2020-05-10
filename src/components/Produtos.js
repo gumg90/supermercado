@@ -33,7 +33,6 @@ export default class Produto extends Component {
                     <Produtos {...this.produtoLaranja}/>
                     <Produtos {...this.produtoUva}/>
                 </div>
-
             </div>
         );
     }
