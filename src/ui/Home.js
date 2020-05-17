@@ -1,15 +1,50 @@
 import React from 'react'
+import ShoppingCart from '@material-ui/icons/ShoppingCart';
+import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
+import MoveToInbox from '@material-ui/icons/MoveToInbox';
 
-const home = () => (
-    <div className="col-12 col-sm-12 col-xl-4"  style={{marginTop : '5vw'}}>
-        <div className="card mx-auto d-block text-white bg-primary mb-3" style={{maxWidth: '18rem'}}>
-        <div className="card-header">Cabeçalho</div>
-        <div className="card-body">
-            <h5 className="card-title">Título de Card Primary</h5>
-            <p className="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-        </div>
-        </div>
-    </div>    
-)
 
-export default home
+export default class Home extends React.Component {
+    render(){
+        return(
+            <div className="row">
+                <div className="col-12 col-sm-12 col-xl-4"  style={{marginTop : '5vw'}}>
+                    <div className="card d-block text-white card-success mb-3" style={{textAlign: 'center'}}>
+                        <div className="card-body" style={{padding: '2rem'}}>
+                            <div>
+                                <div>
+                                <h5 className="card-title" style={{fontSize: "3rem"}}><ShoppingCart style={{fontSize: "5rem"}}/><span className="CardTitle">Vendas</span></h5>
+                                </div>
+                            </div>
+                            <p className="card-text" style={{fontSize: "3rem"}}>0</p>
+                        </div>
+                    </div>
+                </div> 
+                <div className="col-12 col-sm-12 col-xl-4"  style={{marginTop : '5vw'}}>
+                    <div className="card d-block text-white card-primary mb-3" style={{textAlign: 'center'}}>
+                        <div className="card-body" style={{padding: '2rem'}}>
+                        <div>
+                            <div>
+                                <h5 className="card-title" style={{fontSize: "3rem"}}><ShoppingBasket style={{fontSize: "5rem"}}/><span className="CardTitle">Compras</span></h5>
+                                </div>
+                            </div>                            
+                            <p className="card-text" style={{fontSize: "3rem"}}>0</p>
+                        </div>
+                    </div>
+                </div> 
+                <div className="col-12 col-sm-12 col-xl-4"  style={{marginTop : '5vw'}}>
+                    <div className="card d-block text-white card-danger mb-3" style={{textAlign: 'center'}}>
+                        <div className="card-body" style={{padding: '2rem'}}>
+                        <div>
+                            <div>
+                                <h5 className="card-title" style={{fontSize: "3rem"}}><MoveToInbox style={{fontSize: "5rem"}}/><span className="CardTitle">Estoque</span></h5>
+                                </div>
+                            </div>                            
+                            <p className="card-text" style={{fontSize: "3rem"}}>0</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>      
+        ) 
+    }
+}

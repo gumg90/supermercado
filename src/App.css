@@ -1,3 +1,7 @@
+body{
+  background-color: rgb(224, 247, 239)
+}
+
 .App {
   text-align: center;
 }
@@ -49,11 +53,27 @@ hr {
   border: 0.5px solid;
   border-top: 0;
 }
+.container{
+  background-color: white;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
 .menu{
   font-family:'Open Sans', sans-serif;
   font-size: 1rem;
   cursor:pointer;
-  color: white;
+  color: black;
+
+}
+a:focus {
+  color: black;
+  text-decoration:none;
+
+}
+.menu:hover{
+  color: rgb(95, 94, 94);
+  text-decoration:none;
 
 }
 .navbar{
@@ -67,12 +87,16 @@ hr {
 }
 
 .bemVindo{
-  color: white;
+  color: black;
+}
+
+.name{
+  font-weight: bold;
 }
 
 #navbarToggleExternalContent1{
   position: absolute;
-  z-index: 99999999;
+  z-index: 1;
   width: 100%;
 }
 
@@ -84,12 +108,12 @@ hr {
   width: 100%;
 }
 .bg-inverse{
-  background-color: #1700a9!important;
+  background-color:#14633a!important;
 }
 
 .p-4{
     width: 15rem;
-    background: #292b2c;
+    background-color:white!important;
 }
 
 .accountMenu{
@@ -104,4 +128,9 @@ hr {
   margin-left: auto;
   margin-right: 15px;
   padding: 0px;
+}
+
+span{
+  padding-top: 0;
+  vertical-align: super;
 }

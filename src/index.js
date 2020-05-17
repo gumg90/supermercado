@@ -8,12 +8,13 @@ import Categoria from './components/Categoria'
 import * as serviceWorker from './serviceWorker';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router'
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Router history={hashHistory}>
       <Route path='/' component={App}>
         <IndexRoute component={Home} />
-        <Route path='/home' component={Home}/>
+        <Route path='/dashboard' component={Home} />
         <Route path='/produtos' component={Produtos}/>
         <Route path='/categoria' component={Categoria}/>
       </Route>
