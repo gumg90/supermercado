@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import Produtos from '../ui/produtos'
+import './Components.css';
+
 
 
 export default class Produto extends Component {
