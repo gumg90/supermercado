@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router'
-import Icon from '@material-ui/icons/';
 
   
 
