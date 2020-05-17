@@ -13,7 +13,7 @@ export default class Home extends React.Component {
                         <div className="card-body" style={{padding: '2rem'}}>
                             <div>
                                 <div>
-                                <h5 className="card-title" style={{fontSize: "3rem"}}><ShoppingCart style={{fontSize: "5rem"}}/><span className="CardTitle">Vendas</span></h5>
+                                <h5 className="card-title" style={{fontSize: "3rem"}}><ShoppingCart style={{fontSize: "5rem"}}/><span>Vendas</span></h5>
                                 </div>
                             </div>
                             <p className="card-text" style={{fontSize: "3rem"}}>0</p>
@@ -25,7 +25,7 @@ export default class Home extends React.Component {
                         <div className="card-body" style={{padding: '2rem'}}>
                         <div>
                             <div>
-                                <h5 className="card-title" style={{fontSize: "3rem"}}><ShoppingBasket style={{fontSize: "5rem"}}/><span className="CardTitle">Compras</span></h5>
+                                <h5 className="card-title" style={{fontSize: "3rem"}}><ShoppingBasket style={{fontSize: "5rem"}}/><span>Compras</span></h5>
                                 </div>
                             </div>                            
                             <p className="card-text" style={{fontSize: "3rem"}}>0</p>
@@ -37,7 +37,7 @@ export default class Home extends React.Component {
                         <div className="card-body" style={{padding: '2rem'}}>
                         <div>
                             <div>
-                                <h5 className="card-title" style={{fontSize: "3rem"}}><MoveToInbox style={{fontSize: "5rem"}}/><span className="CardTitle">Estoque</span></h5>
+                                <h5 className="card-title" style={{fontSize: "3rem"}}><MoveToInbox style={{fontSize: "5rem"}}/><span>Estoque</span></h5>
                                 </div>
                             </div>                            
                             <p className="card-text" style={{fontSize: "3rem"}}>0</p>

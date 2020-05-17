@@ -64,6 +64,7 @@ hr {
   font-size: 1rem;
   cursor:pointer;
   color: black;
+  font-weight: bold;
 
 }
 a:focus {
@@ -88,6 +89,7 @@ a:focus {
 
 .bemVindo{
   color: black;
+  text-align: center;
 }
 
 .name{
