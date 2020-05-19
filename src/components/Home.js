@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import HomePage from '../ui/home'
+import HomePage from '../ui/Home'
 import './Components.css';
 import {ShoppingCart, ShoppingBasket, MoveToInbox} from '@material-ui/icons';
 

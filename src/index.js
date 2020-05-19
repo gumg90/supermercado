@@ -1,24 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Home from './components/Home'
-import Produtos from './components/Produtos'
-import Categoria from './components/Categoria'
-import * as serviceWorker from './serviceWorker';
-import {Router, Route, IndexRoute, hashHistory} from 'react-router'
+import * as serviceWorker from './serviceWorker'
+import Route from './components/Route';
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={hashHistory}>
-      <Route path='/' component={App}>
-        <IndexRoute component={Home} />
-        <Route path='/dashboard' component={Home} />
-        <Route path='/produtos' component={Produtos}/>
-        <Route path='/categoria' component={Categoria}/>
+      <Route>
+        
       </Route>
-    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

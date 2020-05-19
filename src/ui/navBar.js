@@ -1,5 +1,6 @@
 import CollapseMenuLeft from './collapseMenuLeft'
 import CollapseMenuRight from './collapseMenuRigth'
+import LogoBranca from '../img/logo-branca.png'
 
 
 import React  from 'react'
@@ -48,6 +49,7 @@ export default class produtos extends React.Component{
             <div style={{...styles.line,...styles.lineMiddle}}/>
             <div style={{...styles.line,...styles.lineBottom}}/>
         </button>
+        <img src={LogoBranca} />
         <button className="navbar-toggler accountButton" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent1" aria-controls="navbarToggleExternalContent1" aria-expanded="false" aria-label="Toggle navigation">
             <img className="accountMenu" src="https://rockcontent.com/wp-content/uploads/2018/01/Descri%C3%A7%C3%A3o-de-produto-no-e-commerce.png" alt="Imagem de capa do card" />
         </button>

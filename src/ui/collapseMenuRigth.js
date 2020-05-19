@@ -1,7 +1,7 @@
 import Menu from './menu'
 import React from 'react'
 import Emoji from "react-emoji-render"
-import {ExitToApp, AccountCircle} from '@material-ui/icons/'
+import {ExitToApp, AccountCircle, Sync} from '@material-ui/icons/'
 
 
 
@@ -18,6 +18,13 @@ export default class collapseMenuRigth extends React.Component{
       title: 'Sair',
       action: () => window.location.reload(true)
   }
+
+  Pedidos = {
+    icon: <Sync />,
+    page: 'pedidos',
+    title: 'Pedidos',
+    action: () => window.location.reload(true)
+}
     
   render(){
     return(
@@ -29,6 +36,7 @@ export default class collapseMenuRigth extends React.Component{
             </div>
             <hr style={{width : '2', size : '100', color:'black'}} />       
             <Menu {...this.MinhaConta} />
+            <Menu {...this.Pedidos} />
             <Menu {...this.Sair}/>
           </div>
         </div>

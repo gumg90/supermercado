@@ -1,6 +1,6 @@
 import Menu from './menu'
 import React from 'react'
-import {Dashboard, Storefront, Category} from '@material-ui/icons/'
+import {Dashboard, Storefront, Category, Airplay} from '@material-ui/icons/'
 
 export default class collapseMenuLeft extends React.Component {
     Home = {
@@ -21,6 +21,13 @@ export default class collapseMenuLeft extends React.Component {
         title: 'Categoria',
         action: () => alert('Produto Uva CLick')
     }
+    Monitoramento ={
+        icon: <Airplay />,
+        page:'monitoramento',   
+        title: 'Monitoramento',
+        action: () => alert('Produto Uva CLick')
+
+    }
     
     render(){
         return(
@@ -29,6 +36,7 @@ export default class collapseMenuLeft extends React.Component {
             <Menu {...this.Home}/>
             <Menu {...this.Produtos}/>
             <Menu {...this.Categoria}/>
+            <Menu {...this.Monitoramento}/>
             </div>
         </div>
         )
