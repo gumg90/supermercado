@@ -34,6 +34,12 @@ export default class Produto extends Component {
                     <Produtos {...this.produtoMaca}/>
                     <Produtos {...this.produtoLaranja}/>
                     <Produtos {...this.produtoUva}/>
+                    <Produtos {...this.produtoMaca}/>
+                    <Produtos {...this.produtoLaranja}/>
+                    <Produtos {...this.produtoUva}/>
+                    <Produtos {...this.produtoMaca}/>
+                    <Produtos {...this.produtoLaranja}/>
+                    <Produtos {...this.produtoUva}/>
                 </div>
             </div>
         );

@@ -1,15 +1,15 @@
 
 import React from 'react';
-import NavBar from '../ui/navBar'
+import Footer from '../ui/footer'
 import './Components.css';
 
 
 export default class Header extends React.Component {
     render() {    
       return (
-          <header className="pos-f-t">
-              <NavBar />
-          </header>
+          <div className="pos-f-t">
+              <Footer />
+          </div>
       );
     }
   }
