@@ -7,14 +7,12 @@ import Monitoramento from './Monitoramento'
 import MinhaConta from './MinhaConta'
 import Pedidos from './Pedidos'
 import Sair from './Sair'
-
-
-import {Router, Route, IndexRoute, hashHistory} from 'react-router'
+import {Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 export default class Routes extends React.Component{
     render() {
         return(
-            <Router history={hashHistory}>
+            <Router history={browserHistory}>
                 <Route path='/' component={App}>
                     <IndexRoute component={Home} />
                     <Route path='/dashboard' component={Home} />

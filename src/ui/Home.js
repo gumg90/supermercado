@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Home = (props) => (
-    <div className="col-12 col-sm-12 col-xl-4"  style={{marginTop : '5vw'}}>
+    <div className="col-12 col-sm-12 col-xl-4">
         <div className= {props.class + " card d-block text-white mb-3"} style={{textAlign: 'center'}}>
             <div className="card-body" style={{padding: '2rem'}}>
                 <div>

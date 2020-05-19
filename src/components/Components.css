@@ -37,9 +37,10 @@
   }
   
   .menu:hover{
-    color: rgb(95, 94, 94);
-    text-decoration:none;
-  
+    color: rgb(95, 94, 94);  
+  }
+  .menu:focus {
+    color: black!important;
   }
   .navbar{
     height: 5rem;

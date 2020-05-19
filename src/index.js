@@ -8,9 +8,7 @@ import Route from './components/Route';
 
 ReactDOM.render(
   <React.StrictMode>
-      <Route>
-        
-      </Route>
+      <Route/>
   </React.StrictMode>,
   document.getElementById('root')
 );
