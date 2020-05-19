@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Categorias from '../ui/categorias'
+import ListaCategorias from '../ui/listaCategorias'
 import './Components.css';
 
 
@@ -28,12 +28,12 @@ export default class Categoria extends Component {
         return(
             <div className="text-center">
                 <div className="row">
-                    <Categorias {...this.fruta}/>
-                    <Categorias {...this.verdura}/>
-                    <Categorias {...this.mercearia}/>
-                    <Categorias {...this.fruta}/>
-                    <Categorias {...this.verdura}/>
-                    <Categorias {...this.mercearia}/>
+                    <ListaCategorias {...this.fruta}/>
+                    <ListaCategorias {...this.verdura}/>
+                    <ListaCategorias {...this.mercearia}/>
+                    <ListaCategorias {...this.fruta}/>
+                    <ListaCategorias {...this.verdura}/>
+                    <ListaCategorias {...this.mercearia}/>
                 </div>
             </div>
         );

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Produtos from '../ui/produtos'
+import ListaProdutos from '../ui/listaProdutos'
 import './Components.css';
 
 
@@ -28,18 +28,18 @@ export default class Produto extends Component {
         return(
             <div className="text-center">
                 <div className="row">
-                    <Produtos {...this.produtoMaca}/>
-                    <Produtos {...this.produtoLaranja}/>
-                    <Produtos {...this.produtoUva}/>
-                    <Produtos {...this.produtoMaca}/>
-                    <Produtos {...this.produtoLaranja}/>
-                    <Produtos {...this.produtoUva}/>
-                    <Produtos {...this.produtoMaca}/>
-                    <Produtos {...this.produtoLaranja}/>
-                    <Produtos {...this.produtoUva}/>
-                    <Produtos {...this.produtoMaca}/>
-                    <Produtos {...this.produtoLaranja}/>
-                    <Produtos {...this.produtoUva}/>
+                    <ListaProdutos {...this.produtoMaca}/>
+                    <ListaProdutos {...this.produtoLaranja}/>
+                    <ListaProdutos {...this.produtoUva}/>
+                    <ListaProdutos {...this.produtoMaca}/>
+                    <ListaProdutos {...this.produtoLaranja}/>
+                    <ListaProdutos {...this.produtoUva}/>
+                    <ListaProdutos {...this.produtoMaca}/>
+                    <ListaProdutos {...this.produtoLaranja}/>
+                    <ListaProdutos {...this.produtoUva}/>
+                    <ListaProdutos {...this.produtoMaca}/>
+                    <ListaProdutos {...this.produtoLaranja}/>
+                    <ListaProdutos {...this.produtoUva}/>
                 </div>
             </div>
         );
