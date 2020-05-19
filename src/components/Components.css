@@ -95,6 +95,13 @@
     border-radius: 100px!important;
     margin-top: 1rem;
   }
+
+  .value{
+    color: black;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: 900;
+  }
   
   .footer{
     margin: auto auto;

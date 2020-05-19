@@ -18,12 +18,12 @@ export default class Routes extends React.Component{
                 <Route path='/' component={App}>
                     <IndexRoute component={Home} />
                     <Route path='/dashboard' component={Home} />
-                    <Route path='/produtos' component={Produtos}/>
-                    <Route path='/categoria' component={Categoria}/>
-                    <Route path='/Sair' component={Monitoramento}/>
-                    <Route path='/minha-conta' component={MinhaConta}/>
-                    <Route path='/pedidos' component={Pedidos}/>
-                    <Route path='/sair' component={Sair}/>
+                    <Route path='/produtos' component={Produtos} />
+                    <Route path='/categoria' component={Categoria} />
+                    <Route path='/Sair' component={Monitoramento} />
+                    <Route path='/minha-conta' component={MinhaConta} />
+                    <Route path='/pedidos' component={Pedidos} />
+                    <Route path='/sair' component={Sair} />
                 </Route>
             </Router>
         )
