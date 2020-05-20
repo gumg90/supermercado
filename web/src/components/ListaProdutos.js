@@ -1,48 +1,33 @@
-import React, {Component} from 'react'
+import React, { useEffect, useState } from 'react'
+import api from '../service/api'
 import ListaProdutos from '../ui/listaProdutos'
 import './Components.css';
 
 
 
-export default class Produto extends Component {
+function Produto () {
+    const [produto, setProduto] = useState([]);
 
-    produtoMaca = {
-        title: "Maça",
-        text: "Isto é uma maça",
-        value: "R$10,00",
-        action: () => alert('Produto Maça CLick')
-    }
-    produtoLaranja = {
-        title: "Laranja",
-        text: "Isto é uma Laranja",
-        value: "R$10,00",
-        action: () => alert('Produto Laranja CLick')
-    }
-    produtoUva = {
-        title: "Uva",
-        text: "Isto é uma Uva",
-        value: "R$10,00",
-        action: () => alert('Produto Uva CLick')
-    }
-    render(){
-        return(
-            <div className="text-center">
-                <div className="row">
-                    <ListaProdutos {...this.produtoMaca}/>
-                    <ListaProdutos {...this.produtoLaranja}/>
-                    <ListaProdutos {...this.produtoUva}/>
-                    <ListaProdutos {...this.produtoMaca}/>
-                    <ListaProdutos {...this.produtoLaranja}/>
-                    <ListaProdutos {...this.produtoUva}/>
-                    <ListaProdutos {...this.produtoMaca}/>
-                    <ListaProdutos {...this.produtoLaranja}/>
-                    <ListaProdutos {...this.produtoUva}/>
-                    <ListaProdutos {...this.produtoMaca}/>
-                    <ListaProdutos {...this.produtoLaranja}/>
-                    <ListaProdutos {...this.produtoUva}/>
-                </div>
+    useEffect(() => {
+        async function loadProduto(){
+          const response = await api.get('produto');
+          setProduto(response.data);
+        } 
+        loadProduto();
+    }, [])
+
+    return(
+        <div className="text-center">
+            <div className="row">
+                {produto.map(prod => (
+                    <>
+                        <ListaProdutos key={prod._id} prod={prod}/>
+                    </>
+                ))}
+
             </div>
-        );
-    }
+        </div>
+    );
 }
 
+export default Produto
