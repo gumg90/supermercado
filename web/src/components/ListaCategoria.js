@@ -1,42 +1,33 @@
-import React, {Component} from 'react'
-import ListaCategorias from '../ui/listaCategorias'
+import React, { useEffect, useState } from 'react'
+import ListaCategoria from '../ui/listaCategorias'
+import api from '../service/api'
 import './Components.css';
 
 
 
-export default class Categoria extends Component {
+function Categoria () {
 
-    verdura = {
-        title: "Alface",
-        text: "Isto é uma Alface",
-        value: "R$10,00",
-        action: () => alert('Produto Alface CLick')
-    }
-    fruta = {
-        title: "Laranja",
-        text: "Isto é uma Laranja",
-        value: "R$10,00",
-        action: () => alert('Produto Laranja CLick')
-    }
-    mercearia = {
-        title: "Jarra",
-        text: "Isto é uma Jarra",
-        value: "R$10,00",
-        action: () => alert('Produto Jarra CLick')
-    }
-    render(){
-        return(
-            <div className="text-center">
-                <div className="row">
-                    <ListaCategorias {...this.fruta}/>
-                    <ListaCategorias {...this.verdura}/>
-                    <ListaCategorias {...this.mercearia}/>
-                    <ListaCategorias {...this.fruta}/>
-                    <ListaCategorias {...this.verdura}/>
-                    <ListaCategorias {...this.mercearia}/>
-                </div>
+    const [categoria, setCategoria] = useState([]);
+
+    useEffect(() => {
+        async function loadCategoria(){
+          const response = await api.get('categoria');
+          setCategoria(response.data);
+        } 
+        loadCategoria();
+    }, [])
+
+    return(
+        <div className="text-center">
+            <div className="row">
+            {categoria.map(cat => (
+                <>
+                    <ListaCategoria key={cat._id} cat={cat}/>
+                </>
+            ))}
             </div>
-        );
-    }
+        </div>
+    );
 }
 
+export default Categoria
