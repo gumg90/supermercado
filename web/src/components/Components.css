@@ -35,6 +35,32 @@
     font-weight: bold;
   
   }
+
+  a .card-title{
+    color: black
+  }
+
+  a .card-title:hover{
+    color: black
+  }
+
+  .titlePage{
+    float: left;
+    margin: 0.6rem;
+  }
+
+  .headerPage{
+    text-align: end;
+  }
+
+  .btn-primary {
+    outline-style: none!important;
+    margin: 1rem;
+  }
+  
+  .btn-primary:hover{
+    color: white!important;
+  }
   
   .menu:hover{
     color: rgb(95, 94, 94);  

@@ -6,7 +6,6 @@ module.exports = {
     async index(request, response) {
         const { intinerario } = request.query;
 
-        const techsArrays = parseStringArray(intinerario);
         const Produto = await produto.find({
             intinerario: {
                 $in: techsArrays,

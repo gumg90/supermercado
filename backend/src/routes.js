@@ -8,12 +8,11 @@ const CategoriaController = require('./controllers/CategoriaController')
 
 const routes = Router();
 
-routes.post('/produto', ProdutoController.store);
+routes.post('/produtos', ProdutoController.store);
 routes.post('/categoria', CategoriaController.store);
-routes.get('/produto', ProdutoController.index);
-routes.put('/produto/:id', ProdutoController.update);
-routes.get('/search', SearchController.index);
-routes.delete('/produto/:id', ProdutoController.destroy);
+routes.get('/produtos', ProdutoController.index);
+routes.get('/produto/:id', ProdutoController.list);
+routes.get('/categoria', CategoriaController.index);
 
 
 module.exports=routes;

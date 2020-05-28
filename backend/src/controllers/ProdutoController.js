@@ -2,9 +2,22 @@ const produto = require('../models/produto');
 
 module.exports = { 
     async index(request, response) {
-        const Produto = await produto.find({
+         const Produto = await produto.find({
+
         });
+        console.log(Produto)
+        return response.json(Produto);
         
+
+    },
+
+    async list(request, response) {
+        const id = request.params.id;
+        const Produto = await produto.find({
+            _id: {
+                $in: id,
+            }
+        });
         return response.json(Produto);
 
     },
@@ -40,14 +53,4 @@ module.exports = {
         return response.json(Produto);
     },
 
-    async destroy(request, response) {
-        const id = request.params.id;
-        const Produto = await produto.deleteOne({
-            _id: {
-                $in: id,
-            }
-        })
-
-        return response.json(Produto);
-    },
 }
