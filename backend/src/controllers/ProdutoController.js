@@ -5,7 +5,6 @@ module.exports = {
          const Produto = await produto.find({
 
         });
-        console.log(Produto)
         return response.json(Produto);
         
 
@@ -33,6 +32,8 @@ module.exports = {
                 ativo
 
             })
+            console.log(Produto)
+
     return response.json(Produto);
     },
 
