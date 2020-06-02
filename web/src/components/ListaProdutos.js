@@ -22,7 +22,7 @@ function Produto () {
         <div className="text-center">
             <div className="headerPage">
                 <h1 className="titlePage">Produtos</h1>
-                <button className="btn btn-primary"><Link to={'/produtos/cadProduto'} >Cadastrar Produto</Link></button>
+                <button className="btn btn-primary"><Link to={'/produtos/cadastro-produto'} >Cadastrar Produto</Link></button>
             </div>
             <hr></hr>
 

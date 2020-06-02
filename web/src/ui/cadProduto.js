@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 
-function ProdutoForm({onSubmit}, cat){
+function ProdutoForm({onSubmit}){
     const [nome, setNome] = useState('');
     const [categoria, setCategoria] = useState('');
     const [descricao, setDescricao] = useState('');
     const [value, setValue] = useState('');
+    const [ativo, setAtivo] = useState('');
 
 
     async function handleSubmit(e){
@@ -13,7 +14,8 @@ function ProdutoForm({onSubmit}, cat){
             nome,
             descricao,
             categoria,
-            value
+            value,
+            ativo: true
  
         });
 
@@ -21,10 +23,11 @@ function ProdutoForm({onSubmit}, cat){
         setDescricao('');
         setCategoria('');
         setValue('');
+        setAtivo('');
     }
     
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} action={'/produtos'}>
             <div className="col-12 col-sm-12 col-xl-3">
             <div className="form-group">
                 <label htmlFor="nome">Nome</label>

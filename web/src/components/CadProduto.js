@@ -6,9 +6,10 @@ import { FindReplace } from '@material-ui/icons';
 function CadProduto() {
   const [produto, setProduto] = useState([]);
 
+
     async function handleAddproduto(data){
-        const response = await api.post('/produto', data)
-        setProduto([...produto, response.data]);
+        const response = await api.post('/produtos', data)
+        setProduto(response.data);
         
     }
   return (
