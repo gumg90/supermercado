@@ -15,7 +15,9 @@ class MyButton extends React.Component {
       return (
           <div>
             <button className="btn btn-primary" onClick={this.buttonClicked} style={{marginLeft: '0'}}>Quantidade</button>
-            <span className="countProduto">{this.state.value} Produtos</span>
+            <span className="countProduto">{this.state.value} {this.props.prod}</span>
+            <p className="countProduto">Valor toral: R$ {this.props.value*this.state.value}</p>
+            <button className="btn btn-primary"  style={{marginLeft: '0'}}>Inserir no pedido</button>
         </div>
       );
     }
@@ -32,8 +34,8 @@ function produtos ({prod}){
                 <h5 style={{fontSize: '2.5rem'}}>{prod.nome}</h5>
                 <h6>Categoria: {prod.categoria}</h6>
                 <h6>Descrição: {prod.descricao}</h6>
-                <a className="value">Valor: R$ {prod.value}</a>
-                <MyButton />
+                <a className="value">Valor Unitario: R$ {prod.value}</a>
+                <MyButton prod={prod.nome} value={prod.value}/>
             </div>
         </div>
     )

@@ -1,10 +1,7 @@
 import React  from 'react'
 import {Link} from 'react-router'
 
-
-
-function produtos ({prod}){
-    
+function Produtos ({prod}){
     return (
         <div className="col-12 col-sm-12 col-xl-3" style={{padding: '0 3rem 0 3rem'}}>
             <div className="card mx-auto d-block">
@@ -21,4 +18,4 @@ function produtos ({prod}){
     )
 }
 
-export default produtos
+export default Produtos

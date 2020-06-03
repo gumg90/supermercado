@@ -17,8 +17,8 @@ export default class collapseMenuLeft extends React.Component {
     }
     Categoria = {
         icon: <Category />,
-        page:'categoria',   
-        title: 'Categoria',
+        page:'categorias',   
+        title: 'Categorias',
         action: () => alert('Produto Uva CLick')
     }
     Monitoramento ={

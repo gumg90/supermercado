@@ -4,9 +4,7 @@ module.exports = {
     async index(request, response) {
         const id = request.params.id;
         const Categoria = await categoria.find({
-            _id: {
-                $in: id,
-            }
+
         });
         
         return response.json(Categoria);
@@ -23,6 +21,17 @@ module.exports = {
 
             })
     return response.json(Categoria);
+    },
+
+    async list(request, response) {
+        const id = request.params.id;
+        const Categoria = await categoria.find({
+            _id: {
+                $in: id,
+            }
+        });
+        return response.json(Categoria);
+
     },
 
     async update(request, response) {
