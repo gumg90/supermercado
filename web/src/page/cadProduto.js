@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router'
+
 
 function ProdutoForm({onSubmit}){
     const [nome, setNome] = useState('');
@@ -41,6 +43,7 @@ function ProdutoForm({onSubmit}){
             </div>
             </div>
           <button type="submit" className="btn btn-primary">Salvar</button>
+          <button className="btn btn-warning"><Link to={'/produtos'}>cancelar</Link></button>
         </form>
     );
 }

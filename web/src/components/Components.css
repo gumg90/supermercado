@@ -123,6 +123,11 @@
     margin-top: 1rem;
   }
 
+  .imgProdutoList{
+    width: 20rem;
+    height: 20rem;
+  }
+
   .value{
     color: black;
     font-size: 1rem;
@@ -136,6 +141,12 @@
 
 .socialIcons{
   float: right;
+}
+
+.countProduto{
+  vertical-align: middle;
+  font-size: 2rem;
+  font-family: fantasy;
 }
 
 

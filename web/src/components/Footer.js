@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Footer from '../ui/footer'
+import Footer from '../page/footer'
 import './Components.css';
 
 

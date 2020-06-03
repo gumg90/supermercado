@@ -1,4 +1,3 @@
-const parseStringArray = require('../utils/parseStringArray');
 const produto = require('../models/produto');
 
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ListaCategoria from '../ui/listaCategorias'
+import ListaCategoria from '../page/listaCategorias'
 import api from '../service/api'
 import './Components.css';
 

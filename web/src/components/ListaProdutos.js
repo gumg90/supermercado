@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import api from '../service/api'
-import ListaProdutos from '../ui/listaProdutos'
+import ListaProdutos from '../page/listaProdutos'
 import {Link} from 'react-router'
 
 

@@ -24,7 +24,7 @@ module.exports = {
     async store(request, response) {
         const { nome, categoria, descricao,  value, ativo } = request.body;
 
-            Produto = await produto.create({
+            const Produto = await produto.create({
                 nome,
                 categoria, 
                 descricao,

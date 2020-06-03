@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import api from '../service/api'
-import Produtos from '../ui/produto'
+import Produtos from '../page/produto'
 import {Link} from 'react-router'
+const getId = require('../utils/getId')
   
 
 
@@ -9,7 +10,8 @@ import {Link} from 'react-router'
 
 function Produto ({props}) {
     const [produto, setProduto] = useState([]);
-    let url = window.location.href.split("/")[4];
+    
+    let url  = getId();
     console.log(url)
 
     useEffect(() => {
@@ -24,8 +26,8 @@ function Produto ({props}) {
         
         <div className="text-center">
             <div className="headerPage">
-                <h1 className="titlePage">Produtos</h1>
-                <button className="btn btn-primary"><Link to={'/produtos/cadProduto'}>Cadastrar Produto</Link></button>
+                <h1 className="titlePage">Produto</h1>
+                <button className="btn btn-primary"><Link to={'/produtos/cadastro-produto'}>Cadastrar Produto</Link></button>
             </div>
             <hr></hr>
             <div className="row">
