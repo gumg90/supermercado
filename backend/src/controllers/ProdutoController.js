@@ -30,25 +30,35 @@ module.exports = {
                 descricao,
                 value,
                 ativo
-
             })
-            console.log(Produto)
 
-    return response.json(Produto);
+        return response.json(Produto);
     },
 
     async update(request, response) {
         const id = request.params.id;
-        const {nome, categoria, descricao, value } = request.body;
+        const {nome, categoria, descricao, value, ativo } = request.body;
         const Produto = await produto.find({
             _id: {
                 $in: id,
             }
         }).updateOne({
             nome,
-            categoria,
+            categoria, 
             descricao,
             value,
+            ativo
+        })
+
+        return response.json(Produto);
+    },
+
+    async delete(request, response) {
+        const id = request.params.id;
+        const Produto = await produto.deleteOne({
+            _id: {
+                $in: id,
+            }
         })
 
         return response.json(Produto);

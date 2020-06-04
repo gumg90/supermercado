@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import api from '../service/api';
-import CadCat from '../page/cadCategoria';
-import { FindReplace } from '@material-ui/icons';
+import CadCat from '../page/cadastroCategoria';
 
-function Cadcategoria() {
+function CadCategoria() {
   const [categoria, setCategoria] = useState([]);
 
 
@@ -20,4 +19,4 @@ function Cadcategoria() {
   );
 }
 
-export default Cadcategoria;
+export default CadCategoria;

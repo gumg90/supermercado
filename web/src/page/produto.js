@@ -1,4 +1,6 @@
 import React  from 'react'
+import {Link} from 'react-router'
+
 
 class MyButton extends React.Component {
     constructor(props) {
@@ -37,6 +39,8 @@ function produtos ({prod}){
                 <a className="value">Valor Unitario: R$ {prod.value}</a>
                 <MyButton prod={prod.nome} value={prod.value}/>
             </div>
+            <button className="btn btn-primary"><Link to={`/produto/editar/${prod._id}`}>Editar Produto</Link></button>
+            
         </div>
     )
 }

@@ -4,9 +4,6 @@ import api from '../service/api'
 import './Components.css';
 import {Link} from 'react-router'
 
-
-
-
 function Categoria () {
 
     const [categoria, setCategoria] = useState([]);

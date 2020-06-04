@@ -2,13 +2,14 @@ import React from 'react'
 import App from '../App';
 import Home from './Home'
 import ListaProdutos from './ListaProdutos'
-import ListaCategorias from './ListaCategoria'
+import ListaCategorias from './ListaCategorias'
 import Monitoramento from './Monitoramento'
 import MinhaConta from './MinhaConta'
 import Pedidos from './Pedidos'
 import Sair from './Sair'
-import CadProd from './CadProduto'
-import CadCat from './CadCategoria'
+import CadProd from './CadastroProduto'
+import EditaProd from './EditaProduto'
+import CadCat from './CadastroCategoria'
 import Produto from './Produto'
 import Categoria from './Categoria'
 
@@ -17,7 +18,7 @@ import {Router, Route, IndexRoute, browserHistory } from 'react-router'
 export default class Routes extends React.Component{
     
     render() {
-        let _id=""
+
         return(
             <Router history={browserHistory}>
                 <Route path='/' component={App}>
@@ -25,6 +26,7 @@ export default class Routes extends React.Component{
                     <Route path='/dashboard' component={Home} />
                     <Route path='/produtos' component={ListaProdutos} />
                     <Route path='/produto/:id' component={Produto} />
+                    <Route path='/produto/editar/:id' component={EditaProd} />
                     <Route path='/produtos/cadastro-produto' component={CadProd} />
                     <Route path='/categorias' component={ListaCategorias} />
                     <Route path='/categoria/:id' component={Categoria} />

@@ -1,5 +1,5 @@
-import CollapseMenuLeft from './collapseMenuLeft'
-import CollapseMenuRight from './collapseMenuRigth'
+import CollapseMenuLeft from './menuDireito'
+import CollapseMenuRight from './menuEsquerdo'
 import LogoBranca from '../img/logo-branca.png'
 
 

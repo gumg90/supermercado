@@ -8,6 +8,8 @@ const routes = Router();
 routes.post('/produtos', ProdutoController.store);
 routes.get('/produtos', ProdutoController.index);
 routes.get('/produto/:id', ProdutoController.list);
+routes.delete('/produto/:id', ProdutoController.delete);
+routes.put('/produto/editar/:id', ProdutoController.update);
 routes.post('/categorias', CategoriaController.store);
 routes.get('/categorias', CategoriaController.index);
 routes.get('/categoria/:id', CategoriaController.list);

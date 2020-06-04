@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import api from '../service/api';
-import CadProd from '../page/cadProduto';
-import { FindReplace } from '@material-ui/icons';
+import CadProd from '../page/cadastroProduto';
 
 function CadProduto() {
   const [produto, setProduto] = useState([]);
