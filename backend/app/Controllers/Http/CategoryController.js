@@ -4,13 +4,13 @@ const Category = use('App/Models/Category')
 const Database = use('Database')
 
 class CategoryController {
-    async store ({request, auth}) {
+    async store ({request, response, auth}) {
         const Category = {...request.all(), "user_id": auth.user.id};
         const createCategory = await Category.create(Category);
         return createCategory
 
       }
-    async index ({request, auth, response}) {
+    async index ({request, response, auth}) {
         const categoryByCompany = request.all()
         const subquery = await Database
             .from('categories')
@@ -19,13 +19,21 @@ class CategoryController {
         return subquery
     }
 
-    async show ({params}) {
+    async show ({request, response, params}) {
         const category = Database.from('categories').where('id', params.id).select('*')
         return category
     
       }
 
     async update ({request, response, params}) {
+        const category = await Category.findOrFail(params.id)
+        const updateCategory = request.all()
+        category.merge(updateCategory)
+        await category.save()
+        return await Category.findOrFail(params.id)
+    }
+
+    async destroy ({request, params}) {
         const category = await Category.findOrFail(params.id)
         const updateCategory = request.all()
         category.merge(updateCategory)
